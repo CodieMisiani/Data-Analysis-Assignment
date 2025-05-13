@@ -8,3 +8,11 @@ except FileNotFoundError:
 print(df.info())
 print(df.isnull().sum())
 df = df.dropna()  # OR df.fillna(method='ffill')
+
+
+print(df.describe())
+print(df.groupby('species').mean())
+
+# - Species 2 has the highest average petal length.
+# - Sepal width is similar across species.
+
